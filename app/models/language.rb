@@ -1,4 +1,4 @@
-class Kind < ApplicationRecord
+class Language < ApplicationRecord
   has_many :snippets, dependent: :destroy
 
   validates :name, presence: true, uniqueness: true

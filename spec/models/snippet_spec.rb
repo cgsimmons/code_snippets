@@ -12,10 +12,10 @@ RSpec.describe Snippet, type: :model do
       s.valid?
       expect(s.errors).to have_key(:work)
     end
-    it 'requires kind' do
-      s = build :snippet, kind: nil
+    it 'requires language' do
+      s = build :snippet, language: nil
       s.valid?
-      expect(s.errors).to have_key(:kind)
+      expect(s.errors).to have_key(:language)
     end
   end
 end

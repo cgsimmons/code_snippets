@@ -1,5 +1,5 @@
 class Snippet < ApplicationRecord
-  belongs_to :kind
+  belongs_to :language
 
   validates :title, presence: true
   validates :work, presence: true

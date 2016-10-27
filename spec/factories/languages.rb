@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :kind do
+  factory :language do
     sequence(:name) { |n| "#{Faker::Company.name} #{n}" }
   end
 end

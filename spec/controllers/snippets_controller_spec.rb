@@ -27,10 +27,10 @@ RSpec.describe SnippetsController, type: :controller do
   end
 
   describe '#create' do
-    let(:kind){create(:kind)}
+    let(:language){create(:language)}
     context 'with a valid request'do
       def valid_request
-        post :create, params: {snippet: attributes_for(:snippet, kind_id: kind.id)}
+        post :create, params: {snippet: attributes_for(:snippet, language_id: language.id)}
       end
 
       it 'adds snippet to the DB' do
@@ -47,7 +47,7 @@ RSpec.describe SnippetsController, type: :controller do
 
     end
     def invalid_request
-      post :create, params: {snippet: attributes_for(:snippet, title: nil, kind_id: kind.id)}
+      post :create, params: {snippet: attributes_for(:snippet, title: nil, language_id: language.id)}
     end
     context 'without a valid request' do
       it 'doesn\t add snippet to the DB' do

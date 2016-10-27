@@ -6,8 +6,8 @@
   <%= f.text_field :title %>
 </div>
 <div>
-  <%= f.label :kind_id %>
-  <%= f.collection_select(:kind_id, Kind.all, :id, :name) %>
+  <%= f.label :language_id %>
+  <%= f.collection_select(:language_id, Language.all, :id, :name) %>
 </div>
 <div>
   <%= f.label :work %>
