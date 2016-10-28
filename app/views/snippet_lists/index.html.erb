@@ -1,0 +1,18 @@
+<h1 class="search_page_title">All Snippets</h1>
+<div class="search_box">
+  <%= form_tag(snippet_lists_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Snippets" %>
+  <%= submit_tag "Search" %><br>
+  <%= label_tag :sort_by, nil, class: 'sort_label'%>
+  <%= select_tag :sort_by, options_for_select([['Title','title'], ['Language', 'language_id'], ['Newest', 'created_at']])  %>
+  <% end %>
+</div>
+<div class="list_container">
+<% @snippets.each do |snip| %>
+  <div>
+    <h3><%= link_to "#{snip.title}", snippet_path(snip)%></h3>
+    <%= snip.language.name %>
+  </div>
+  <hr>
+<% end %>
+</div>

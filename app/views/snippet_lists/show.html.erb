@@ -1,0 +1,10 @@
+<h1>Snippets for <%= @language.name %></h1>
+
+<%= link_to '< back', root_path %>
+<br>
+<% @snippets.each do |snip| %>
+  <div>
+    <h3><%= link_to "#{snip.title}", snippet_path(snip)%></h3>
+  </div>
+  <hr>
+<% end %>

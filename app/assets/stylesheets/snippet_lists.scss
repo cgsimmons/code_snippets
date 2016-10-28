@@ -1,0 +1,25 @@
+// Place all the styles related to the snippet_lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.search_page_title {
+  display: inline-block;
+  margin: 13px 15% 10px 0px;
+}
+
+.search_box {
+  float:right;
+  margin-bottom: 10px;
+}
+
+#search-form {
+  display: inline-block;
+}
+
+.sort_label {
+  margin-top: 10px;
+  display: inline-block;;
+}
+
+.list_container {
+  clear:both;
+}

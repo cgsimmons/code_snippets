@@ -18,4 +18,15 @@ RSpec.describe Snippet, type: :model do
       expect(s.errors).to have_key(:language)
     end
   end
+
+  describe 'methods' do
+    context 'search'
+      it 'returns correct search' do
+        5.times do |i|
+          create :snippet, title: "hello#{i}", work:"bananas#{i}"
+        end
+        result = Snippet.search("hello3").first
+        expect(result.title).to eq("hello3")
+      end
+  end
 end
