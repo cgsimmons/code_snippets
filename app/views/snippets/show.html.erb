@@ -1,8 +1,18 @@
 <h1><%= @snippet.title %></h1>
-<div>
-  <%= @snippet.language.name %>
-</div>
-<br>
-<div>
-  <%= @snippet.work %>
-</div>
+<h3><span id="language"><%= @snippet.language.name %></span></h3>
+<p><%= @snippet.description %></p>
+<div id="editor"><%= @snippet.code %></div>
+<% if user_signed_in? %>
+  <% if can? :manage, @snippet %>
+  <%= link_to 'edit', edit_snippet_path(@snippet)%>
+  <%= link_to 'delete', snippet_path(@snippet),
+                        method: :delete,
+                        data: {confirm: 'Are you sure?'}%>
+  <% end %>
+<% end %>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.getSession().setMode("ace/mode/" + $('#language').html());
+    editor.setReadOnly(true);
+</script>

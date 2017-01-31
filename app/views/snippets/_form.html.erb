@@ -1,0 +1,30 @@
+<div id="outter-container">
+  <div id="inner-container">
+    <div id='form'>
+      <%= form_for @snippet do |f| %>
+      <div>
+        <div class='snippet-top'>
+          <%= f.label :title %>
+          <%= f.text_field :title %>
+        </div>
+        <div class='snippet-top'>
+          <%= f.label :language_id %>
+          <%= f.collection_select(:language_id, Language.all, :id, :name) %>
+          <%= f.hidden_field :code%>
+        </div>
+      </div>
+      <div>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+      </div>
+      <div>
+        <div class='snippet-top'><%= f.check_box :privacy %></div>
+        <div class='snippet-top'><%= f.label :privacy, "Private" %></div>
+      </div><br>
+      <div id="editor"></div>
+      <br>
+      <div><%= f.submit%></div>
+      <% end %>
+    </div>
+  </div>
+</div>

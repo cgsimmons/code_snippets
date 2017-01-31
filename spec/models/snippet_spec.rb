@@ -7,10 +7,10 @@ RSpec.describe Snippet, type: :model do
       s.valid?
       expect(s.errors).to have_key(:title)
     end
-    it 'requires work' do
-      s = build :snippet, work: nil
+    it 'requires code' do
+      s = build :snippet, code: nil
       s.valid?
-      expect(s.errors).to have_key(:work)
+      expect(s.errors).to have_key(:code)
     end
     it 'requires language' do
       s = build :snippet, language: nil
@@ -23,7 +23,7 @@ RSpec.describe Snippet, type: :model do
     context 'search'
       it 'returns correct search' do
         5.times do |i|
-          create :snippet, title: "hello#{i}", work:"bananas#{i}"
+          create :snippet, title: "hello#{i}", code:"bananas#{i}"
         end
         result = Snippet.search("hello3").first
         expect(result.title).to eq("hello3")

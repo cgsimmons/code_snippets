@@ -16,3 +16,7 @@
  h1 {
    line-height: 30px;
  }
+
+#sign-in{
+  float: right;
+}

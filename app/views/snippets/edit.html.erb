@@ -1,0 +1,7 @@
+<h1>Edit Snippet</h1>
+<%= render 'form', {btn_label: 'Save Changes'} %>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.getSession().setMode("ace/mode/" + $('#language').html());
+</script>
