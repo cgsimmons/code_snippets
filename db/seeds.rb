@@ -40,4 +40,4 @@ puts "Seeded Languages"
 #                  description: Faker::Company.bs,
 #                  language: Language.order("RANDOM()").first)
 # end
-puts "Seeded Snippets Languages"
+# puts "Seeded Snippets Languages"

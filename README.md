@@ -1,24 +1,15 @@
-# README
+## Code Snippets
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Manage and share code snippets with this rails app. The code snippets are saved/viewed using <a href='https://ace.c9.io'>Ace code editor</a>.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Clone the repo and run the following commands from the project root directory.
 
-* System dependencies
+```bash
+rails install
+rails db:setup
+rails s
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You can then view the app at http://127.0.0.1:3000
