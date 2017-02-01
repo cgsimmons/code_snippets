@@ -34,10 +34,10 @@ Language.create(name: 'scss')
 Language.create(name: 'swift')
 puts "Seeded Languages"
 
-50.times do |i|
-  Snippet.create(title: Faker::Hipster.sentence(3, true, 2),
-                 code: Faker::Lorem.paragraph(2),
-                 description: Faker::Company.bs,
-                 language: Language.order("RANDOM()").first)
-end
-puts "Seeded Snippets"
+# 50.times do |i|
+#   Snippet.create(title: Faker::Hipster.sentence(3, true, 2),
+#                  code: Faker::Lorem.paragraph(2),
+#                  description: Faker::Company.bs,
+#                  language: Language.order("RANDOM()").first)
+# end
+puts "Seeded Snippets Languages"
